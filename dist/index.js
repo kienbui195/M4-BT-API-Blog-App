@@ -58,6 +58,10 @@ data_source_1.AppDataSource.initialize().then((connection) => __awaiter(void 0, 
         yield BlogRePo.delete({ id: +req.query.id });
         res.redirect('/');
     }));
+    app.get('/detail', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+        let data = yield BlogRePo.findOneBy({ id: +req.query.id });
+        res.render('detail', { data: data });
+    }));
     app.listen(port, () => {
         console.log(`running at http://localhost:${port}`);
     });

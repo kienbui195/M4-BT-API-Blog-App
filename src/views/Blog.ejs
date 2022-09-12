@@ -17,7 +17,7 @@
         
         <div class="col-6">
             <% data.forEach((item, index) => { %>
-            <h3><%= item.title %></h3>
+            <a href="/detail?id=<%= item.id %>" style="text-decoration: none;"><%= item.title %></a>
             <p><%= item.content %></p>  
             <a href="/update?id=<%= item.id %>" class="btn btn-primary">Update</a>
             <a href="/delete?id=<%= item.id %>" class="btn btn-danger">Delete</a>

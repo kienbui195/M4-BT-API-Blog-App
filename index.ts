@@ -55,6 +55,11 @@ AppDataSource.initialize().then(async connection => {
         res.redirect('/');
     })
 
+    app.get('/detail', async (req, res) => {
+        let data = await BlogRePo.findOneBy({ id: +req.query.id });
+        res.render('detail', { data: data })
+    })
+
     app.listen(port, () => {
         console.log(`running at http://localhost:${port}`);
         
