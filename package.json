@@ -1,0 +1,37 @@
+{
+    "name": "m4-th-xd-api-cho-product-manager-app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "rimraf dist && tsc -p tsconfig.build.json",
+        "start:dev": "tsc-watch -p tsconfig.build.json --onSuccess \"node dist/index.js\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kienbui195/M4-TH-XD-API-cho-Product-Manager-App.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/kienbui195/M4-TH-XD-API-cho-Product-Manager-App/issues"
+    },
+    "homepage": "https://github.com/kienbui195/M4-TH-XD-API-cho-Product-Manager-App#readme",
+    "devDependencies": {
+        "@types/express": "^4.17.13",
+        "@types/multer": "^1.4.7",
+        "rimraf": "^3.0.2",
+        "tsc": "^2.0.4",
+        "tsc-watch": "^5.0.3",
+        "typescript": "^4.8.2"
+    },
+    "dependencies": {
+        "body-parser": "^1.20.0",
+        "express": "^4.18.1",
+        "multer": "^1.4.5-lts.1",
+        "nodemon": "^2.0.19",
+        "reflect-metadata": "^0.1.13",
+        "typeorm": "^0.3.9"
+    }
+}
